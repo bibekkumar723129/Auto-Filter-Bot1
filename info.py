@@ -99,8 +99,8 @@ LANGUAGES = [language.lower() for language in environ.get('LANGUAGES', 'hindi en
 QUALITY = [quality.lower() for quality in environ.get('QUALITY', '360p 480p 720p 1080p 2160p').split()]
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", script.IMDB_TEMPLATE)
 FILE_CAPTION = environ.get("FILE_CAPTION", script.FILE_CAPTION)
-SHORTLINK_URL = environ.get("SHORTLINK_URL", "linkcents.com")
-SHORTLINK_API = environ.get("SHORTLINK_API", "e78e5f774a9dede8f6b3d155a1fea041a35bb720")
+SHORTLINK_URL = environ.get("SHORTLINK_URL", "shortner.in")
+SHORTLINK_API = environ.get("SHORTLINK_API", "eb2e77b7a84a5fc771d6bbd29aec6714bcd487b0")
 VERIFY_EXPIRE = int(environ.get('VERIFY_EXPIRE', 86400)) # Add time in seconds
 WELCOME_TEXT = environ.get("WELCOME_TEXT", script.WELCOME_TEXT)
 INDEX_EXTENSIONS = [extensions.lower() for extensions in environ.get('INDEX_EXTENSIONS', 'mp4 mkv').split()]
@@ -108,7 +108,7 @@ PM_FILE_DELETE_TIME = int(environ.get('PM_FILE_DELETE_TIME', '3600'))
 
 # boolean settings
 USE_CAPTION_FILTER = is_enabled('USE_CAPTION_FILTER', True)
-IS_VERIFY = is_enabled('IS_VERIFY', False)
+IS_VERIFY = is_enabled('IS_VERIFY', True)
 AUTO_DELETE = is_enabled('AUTO_DELETE', True)
 WELCOME = is_enabled('WELCOME', True)
 PROTECT_CONTENT = is_enabled('PROTECT_CONTENT', False)
@@ -126,7 +126,7 @@ if len(BIN_CHANNEL) == 0:
     exit()
 else:
     BIN_CHANNEL = int(BIN_CHANNEL)
-URL = environ.get("URL", "https://auto-filter-bot1.onrender.com")
+URL = environ.get("URL", "https://sandhubotz.onrender.com")
 if len(URL) == 0:
     logger.error('URL is missing, exiting now')
     exit()
@@ -148,7 +148,7 @@ STICKERS = [sticker for sticker in environ.get('STICKERS', 'CAACAgIAAxkBAAEN4ctn
 # for Premium 
 IS_PREMIUM = is_enabled('IS_PREMIUM', True)
 PRE_DAY_AMOUNT = int(environ.get('PRE_DAY_AMOUNT', '10')) # add amount in INR for premium charge pre day 
-UPI_ID = environ.get("UPI_ID", "contact@darkworld008")
+UPI_ID = environ.get("UPI_ID", "7384550263@fam")
 if len(UPI_ID) == 0:
     logger.info('UPI_ID is empty')
 UPI_NAME = environ.get("UPI_NAME", "@darkworld008") # add your UPI account name
