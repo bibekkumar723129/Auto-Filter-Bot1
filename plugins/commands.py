@@ -584,7 +584,7 @@ async def on_auto_filter(bot, message):
 
 @Client.on_message(filters.command('off_pm_search') & filters.user(ADMINS))
 async def off_pm_search(bot, message):
-    db.update_bot_sttgs('PM_SEARCH', False)
+    db.update_bot_sttgs('PM_SEARCH', True)
     await message.reply('Successfully turned off pm search for all users')
 
 
